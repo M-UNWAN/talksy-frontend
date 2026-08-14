@@ -585,7 +585,7 @@ function App() {
       formData.append("file", file);
 
       const response = await fetch(
-        "http://localhost:5000/upload",
+        "https://talksy-backend-w3cv.onrender.com/upload",
         {
           method: "POST",
           body: formData,
@@ -606,7 +606,7 @@ function App() {
       }
 
       const imageUrl =
-        `http://localhost:5000${data.mediaUrl}`;
+        `https://talksy-backend-w3cv.onrender.com${data.mediaUrl}`;
 
       socket.emit(
         "update_profile_picture",
@@ -699,7 +699,7 @@ function App() {
 
       const response =
         await fetch(
-          "http://localhost:5000/upload",
+          "https://talksy-backend-w3cv.onrender.com/upload",
           {
             method: "POST",
             body: formData,
@@ -1538,13 +1538,13 @@ function App() {
                       {msg.messageType ===
                         "image" && (
                         <img
-                          src={`http://localhost:5000${msg.mediaUrl}`}
+                          src={`https://talksy-backend-w3cv.onrender.com${msg.mediaUrl}`}
                           alt="Shared"
                           className="chat-image"
                           onClick={() =>
                             window.open(
-                              `http://localhost:5000${msg.mediaUrl}`,
-                              "_blank"
+                              `https://talksy-backend-w3cv.onrender.com${msg.mediaUrl}`,
+"_blank"
                             )
                           }
                         />
@@ -1555,7 +1555,7 @@ function App() {
                       {msg.messageType ===
                         "video" && (
                         <video
-                          src={`http://localhost:5000${msg.mediaUrl}`}
+                          src={`https://talksy-backend-w3cv.onrender.com${msg.mediaUrl}`}
                           controls
                           className="chat-video"
                         />
