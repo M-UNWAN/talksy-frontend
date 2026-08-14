@@ -1231,11 +1231,11 @@ function App() {
                       {user.profilePicture ? (
                         <img
                           src={
-                            user.profilePicture
+                            user.profilePicture?.startsWith("http")
+                              ? user.profilePicture
+                              : `https://talksy-backend-w3cv.onrender.com${user.profilePicture}`
                           }
-                          alt={
-                            user.username
-                          }
+                          alt={user.username}
                           className="profile-picture"
                         />
                       ) : (
